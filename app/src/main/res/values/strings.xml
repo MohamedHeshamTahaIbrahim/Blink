@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Blink</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="driver_profile">Driver Profile</string>
+    <string name="driver_name">Wael Nofal</string>
+    <string name="driver_number">010012345678</string>
+    <string name="title_activity_driver_profile">DriverProfile</string>
+    <string name="driver_address">41Abd EL Moneam Hafez</string>
+    <string name="view">View More</string>
+    <string name="car_info">Car Info</string>
+    <string name="title_activity_car_info">CarInfo</string>
+
+</resources>
