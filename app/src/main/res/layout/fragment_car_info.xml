@@ -3,48 +3,364 @@
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
-        android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:layout_height="fill_parent"
         tools:context="com.blink.CarInfo$PlaceholderFragment"
         android:background="#FFFFFF">
         <LinearLayout
             android:orientation="vertical" android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:background="#FFFFFF">
             <include layout="@layout/header_car_info"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 />
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
-                <ImageView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/fffff"
-                    android:id="@+id/carimg"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
+
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:weightSum="1">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="116dp"
-                android:background="#87F717"
-                android:layout_weight="0.20" />
-</LinearLayout>
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="190dp"
+                    android:src="@drawable/fffff"
+                    android:id="@+id/carimg" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="81dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="#09121212"
+                    android:weightSum="2">
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.46"
+                        android:orientation="vertical"
+                        android:background="#87F717">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/kilo"
+                            android:layout_gravity="center_horizontal"
+
+                            android:layout_weight="0.05" />
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/value"
+                    android:text="@string/car_speed"
+                    android:gravity="center|center_horizontal"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="normal|bold|italic"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.46"
+                        android:orientation="vertical"
+
+                        android:layout_marginLeft="120dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/attention"
+                            android:layout_gravity="center_horizontal"
+
+                            android:layout_weight="0.05" />
+                        <TextView
+                            android:layout_width="129dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:id="@+id/value_number"
+                            android:text="3"
+                            android:gravity="center|center_horizontal"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textStyle="normal|bold|italic"
+                            android:textSize="20dp"
+                            android:textColor="#fc000000" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_add"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="180dp"
+                    >
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:background="@drawable/pluse"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <CheckBox
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/circle_checkbox"
+
+                        android:layout_gravity="left"
+                        android:layout_marginRight="15dp"
+                       />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                      android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+
+                      >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/new_tire"
+                            android:id="@+id/new_tires"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/date_new_tire"
+                            android:id="@+id/date_new_tires"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                        </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="1dp"
+                        android:layout_gravity="right"
+
+                        >
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+
+                            android:id="@+id/kilo_value"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="150,000km"
+                            android:id="@+id/kilo_extra"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <CheckBox
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/circle_checkbox"
+
+                        android:layout_gravity="left"
+                        android:layout_marginRight="15dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/change_oil"
+                            android:id="@+id/change_oil"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/date_new_tire"
+                            android:id="@+id/date_change_oil_2"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="1dp"
+                        android:layout_gravity="right"
+
+                        >
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+
+                            android:id="@+id/kilo_value_2"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="140,000km"
+                            android:id="@+id/date_change_oil"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/attention"
+                        android:layout_weight="0.07"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <CheckBox
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/circle_checkbox"
+
+                        android:layout_gravity="left"
+                        android:layout_marginRight="15dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/battery"
+                            android:id="@+id/battery"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/battery_date"
+                            android:id="@+id/date_battery"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
+                    >
+                    <CheckBox
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/circle_checkbox"
+
+                        android:layout_gravity="left"
+                        android:layout_marginRight="15dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="15dp"
+
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="@string/check_light"
+                            android:id="@+id/check_lights"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Dec 20,2015"
+                            android:id="@+id/date_check_lights"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="1dp"
+                        android:layout_gravity="right"
+
+                        >
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+
+                            android:id="@+id/kilo_value_3"
+
+                            android:layout_gravity="center_horizontal" />
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="150,000km"
+                            android:id="@+id/date_check_lights_2"
+                            android:textColor="#48000000"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
 
         </LinearLayout>
     </ScrollView>

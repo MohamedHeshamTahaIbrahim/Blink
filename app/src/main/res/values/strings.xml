@@ -12,5 +12,16 @@
     <string name="view">View More</string>
     <string name="car_info">Car Info</string>
     <string name="title_activity_car_info">CarInfo</string>
-
+   <string name="car_speed">141,356 Km</string>
+    <string name="new_tire">New Tires</string>
+    <string name="date_new_tire">Mar 20,2015</string>
+    <string name="change_oil">Change Oil</string>
+    <string name="birthday_date">20 May 1991</string>
+    <string name="car_type">Kia,Rio 2001</string>
+    <string name="kilo_value">47km/h (15,426 km)</string>
+    <string name="user_name">Islam Mashaly</string>
+    <string name="user_number">01007248408</string>
+    <string name="battery">Battery</string>
+    <string name="battery_date">Feb 5,2015</string>
+    <string name="check_light">Check Lights</string>
 </resources>
